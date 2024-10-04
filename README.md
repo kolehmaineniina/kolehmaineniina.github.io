@@ -1,1 +1,1 @@
-Web design School project
+Website Design for IT BBA studies 
