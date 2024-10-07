@@ -69,7 +69,7 @@
 }
 
 .container {
-  max-width: 90vw;
+  max-width: 70vw;
   height: 100%; 
   margin: 0 auto;  
   padding: 0 20px;
@@ -141,13 +141,13 @@ a {
   text-decoration: none;
   }
   
-  a:hover {
-  font-size: 1.1rem; 
-  }
+a:hover {
+font-size: 1.1rem; 
+}
 
 #logo {
-    height: 80%; 
-    width: auto; 
+  height: 80%; 
+  width: auto; 
 }
 
 #intro {
