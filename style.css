@@ -1,0 +1,144 @@
+@media (max-width: 768px) {
+  body {
+    max-width: 90vw; /* Change the width for smaller screens */
+    padding: 10px;   /* Reduce padding */
+  }
+}
+
+@font-face {
+    font-family: 'DM Sans';
+    src: url('https://kolehmaineniina.github.io/fonts/DMSans[opsz,wght].ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'DM Sans';
+    src: url('https://kolehmaineniina.github.io/fonts/DMSans[opsz,wght].ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('https://kolehmaineniina.github.io/fonts/SourceSans3[wght].ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'Source Sans 3';
+    src: url('https://kolehmaineniina.github.io/fonts/SourceSans3[wght].ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('https://kolehmaineniina.github.io/fonts/Caveat[wght].ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+  
+@font-face {
+  font-family: 'Caveat';
+  src: url('https://kolehmaineniina.github.io/fonts/Caveat[wght].ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  background-color: #191919;
+  color: #f2f2f2;
+  font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
+  --lime-color: #d7dd65 #d7dd65;
+  --pink-color: #f24d92;
+
+  }
+
+.light-theme {
+  --link-color: #a49e12;
+  background-color: #f2f2f2;
+  color: #191919
+  
+}
+
+body {
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 16px;            
+  line-height: 1.6;                          
+  max-width: 70vw; /* 70% of the viewport width */
+  margin: 0 auto;  /* Center the content */
+  padding: 20px;
+   
+}
+
+a {
+  font-family: 'Caveat', serif;
+  font-size: 1.2rem;
+  color: var(--lime-color);
+  font-size: 1rem;
+  font-weight: 700; 
+  transition: font-size 0.3s ease;
+  text-transform: uppercase; 
+  }
+  
+  a:hover {
+  font-size: 1.1rem; 
+  }
+
+#intro {
+  text-align: left;
+  padding: 50px;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+#navigation {
+  a {
+  font-family: 'Source Sans 3', sans-serif;
+  color: #f2f2f2;
+  font-weight: 800;
+    
+  }
+}
+
+#footer{
+
+}
+
+#intro p {
+  font-size: 3rem;
+  color:  #d7dd65;
+}
+
+#about-preview {
+    text-align: center;
+    padding: 50px;
+    background-color: #fff; /* White background */
+}
+
+#about-preview h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+#about-preview p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
