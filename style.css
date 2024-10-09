@@ -1,10 +1,3 @@
-@media (max-width: 768px) {
-  body {
-    max-width: 90vw; /* Change the width for smaller screens */
-    padding: 10px;   /* Reduce padding */
-  }
-}
-
 @font-face {
     font-family: 'DM Sans';
     src: url('https://kolehmaineniina.github.io/fonts/DMSans[opsz,wght].ttf') format('truetype');
@@ -122,7 +115,6 @@ body {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;            
   line-height: 1.5;                          
-  margin: 0% auto;
   align-items: center;
 }
 
@@ -135,9 +127,7 @@ h2 {
 }
 
 main {
-  max-width: 80vw; /* Limit the width of the main element */
-  margin: 0 auto; /* Center the main content */
-  padding: 20px; /* Optional padding for spacing */
+  margin: 10%; /* Center the main content */
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
@@ -161,23 +151,21 @@ font-size: 1.1rem;
 }
 
 #hero {
-  background: var(--dark-color);
-  display: flex; /* Enable Flexbox for layout */
-  justify-content: space-between; /* Space between text and image */
-  align-items: center; /* Vertically align items in the center */
+  display: flex;
+  align-items: center; 
+  background-image: url('images/hero_image-1.png'); /* Set the image as the background */
+  background-size: cover; /* Make sure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  height: 100vh; /* Set the hero section to take full viewport height */
   max-width: 100vw; /* Full width of the viewport */
-  height: auto;
-  margin-left: 4.9%; /* Center the hero section */
-  padding-top: 50px;
+  text-align: left; /* Center text */
 }
 
 #hero .hero-text {
-  line-height: 1.2;
-  max-width: 90vw;
-  padding-left: 20px; /* Add padding on the left */
-  display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Vertically center the text */
+  margin: 5%;
+  max-width: 40%; /* Control the width of the text container */
+  padding: 20px; /* Add padding around the text for better spacing */
 }
 
 #hero h1 {
@@ -193,21 +181,14 @@ font-size: 1.1rem;
   margin: 0; /* Remove default margin from the list */
 }
 
-#hero img {
-  max-width: 70%; /* Image takes up 70% of the hero section */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the space neatly */
-}
-
-
 @media (max-width: 768px) {
   #hero {
-    min-height: 100vw;
+    background-image: none;
 
   }
 
-  #hero img {
-    display: none;
+  #hero hero-text {
+    max-width: 100vw;
   }
 }
 
