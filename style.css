@@ -52,7 +52,7 @@
   background-color: var(--dark-color);
   color: var(--light-color);
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
-  --dark-color: #191919;
+  --dark-color: #0a0b04;
   --light-color: #f2f2f2;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
@@ -114,6 +114,10 @@ nav a {
     color: var(--light-color)
 }
 
+footer {
+
+}
+
 body {
   font-family: 'DM Sans', sans-serif;
   font-size: 16px;            
@@ -137,7 +141,6 @@ main {
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-
 a {
   font-family: 'Caveat', serif;
   color: var(--main-color-light);
@@ -158,6 +161,7 @@ font-size: 1.1rem;
 }
 
 #hero {
+  background: var(--dark-color);
   display: flex; /* Enable Flexbox for layout */
   justify-content: space-between; /* Space between text and image */
   align-items: center; /* Vertically align items in the center */
