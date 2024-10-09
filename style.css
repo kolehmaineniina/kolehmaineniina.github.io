@@ -164,22 +164,26 @@ font-size: 1.1rem;
 
 #hero .hero-text {
   margin: 5%;
-  max-width: 40%; /* Control the width of the text container */
-  padding: 20px; /* Add padding around the text for better spacing */
+  max-width: 45%;
 }
 
 #hero h1 {
+  font-family:'Source Sans 3';
   font-size: 3rem;
-  font-weight: 800;
-  margin: 0 0 10px 0; /* Adjust margin below the heading */
+  font-weight: 00;
+  text-transform:lowercase;
+  line-height: 1.2;
+  margin-left: 0 0 10px 0; 
+  
 }
 
 #hero ul {
-  list-style-type: none; /* Remove bullet points */
-  font-size: smaller;
-  padding: 0; /* Remove default padding from the list */
-  margin: 0; /* Remove default margin from the list */
+  font-family: 'Source Sans 3';
+  list-style-type: none; 
+  font-size: rem;
 }
+
+
 
 @media (max-width: 768px) {
   #hero {
@@ -187,7 +191,7 @@ font-size: 1.1rem;
 
   }
 
-  #hero hero-text {
+  #hero .hero-text {
     max-width: 100vw;
   }
 }
