@@ -46,6 +46,7 @@
   color: var(--light-color);
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
   --dark-color: #0a0b04;
+  --grey-color: #353535;
   --light-color: #f2f2f2;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
@@ -107,9 +108,6 @@ nav a {
     color: var(--light-color)
 }
 
-footer {
-
-}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -134,15 +132,37 @@ main {
 a {
   font-family: 'Caveat', serif;
   color: var(--main-color-light);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700; 
   transition: font-size 0.3s ease;
   text-transform: uppercase; 
   text-decoration: none;
+  
   }
   
 a:hover {
 font-size: 1.1rem; 
+}
+
+a:visited {
+  color: var(--main-color-dark);
+}
+
+ul {
+  list-style-type: none;
+  display: block;
+}
+
+hr {
+  border: none;
+  border-top: 2px solid var(--grey-color);
+  background-color: transparent;
+  margin: 15px 0;
+}
+
+hr.short {
+  width: 40px;
+  margin: 25px 0;
 }
 
 #logo {
@@ -197,7 +217,7 @@ font-size: 1.1rem;
 }
 
 
-#intro {
+#stand-out {
   text-align: left;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 2.5rem;
@@ -206,13 +226,74 @@ font-size: 1.1rem;
   margin-bottom: 10px;
 }
 
-#intro p {
+#stand-out p {
   font-size: 3rem;
   color:  #d7dd65;
 }
+
 
 #about-preview p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
 
+footer {
+  bottom: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+footer #footer-content {
+  margin: 10vw;
+ /* display: flex;
+  flex-direction: column;
+  align-items: flex-start; */
+}
+
+
+footer #stand-out{
+  text-transform: uppercase;
+}
+
+ul.socials {
+  display: flex; 
+  gap: 20px;
+  padding: 20px 0px 20px 0px; 
+
+}
+ul.socials li a {
+  font-size: 2rem; 
+}
+
+#footer-info {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%; 
+}
+
+#footer-info img {
+  height: 80px; 
+  width: auto;
+  
+}
+
+#footer-info ul {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  #footer-content {
+      flex-direction: column; 
+      align-items: flex-start; 
+  }
+
+  ul.socials, ul.contact-info {
+    margin-bottom: 20px; 
+}
+
+  #footer-logo {
+  margin: 0 auto; /* Center the logo on small screens */
+  }
+}
