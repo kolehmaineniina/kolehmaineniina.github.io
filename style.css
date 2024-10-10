@@ -246,16 +246,53 @@ footer {
   width: 100%;
 }
 
-footer #footer-content {
+#contact {
   margin: 10vw;
  /* display: flex;
   flex-direction: column;
   align-items: flex-start; */
 }
 
-
 footer #stand-out{
   text-transform: uppercase;
+}
+
+#contact-box {
+  padding-left: 20px; /* Padding inside the box */
+  width: 100%;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: var(--main-color-light);/* Box border */
+  position: relative; /* Needed for positioning the arrow */
+  margin-bottom: 20px;
+  cursor: pointer; /* Add cursor for interaction */
+  font-family: 'Caveat';
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Add transition for future hover effects */
+}
+
+/* Background customization (Future-proofing) */
+#contact-box:hover {
+  color: var(--main-color-dark); /* Change border color on hover */
+}
+
+/* Add arrow after text */
+#contact-box::after {
+  content: '→'; /* Arrow symbol */
+  font-size: 1.2rem; /* Size of the arrow */
+  margin-left: 10px; /* Space between text and arrow */
+  margin-right: 20px;
+  position: absolute;
+  right: 10px; /* Position arrow near the right inside the box */
+  top: 50%;
+  transform: translateY(-50%); /* Center the arrow vertically */
+  transition: margin-left 0.3s ease; /* Smooth movement of the arrow */
+}
+
+/* Arrow movement on hover */
+#get-in-touch-box:hover::after {
+  margin-left: 20px; /* Move the arrow to the right on hover */
 }
 
 ul.socials {
@@ -290,7 +327,7 @@ ul.socials li a img {
 
 #footer-info ul {
   font-size: 0.8rem;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 @media (max-width: 768px) {
