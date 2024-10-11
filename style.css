@@ -45,7 +45,7 @@
   background-color: var(--dark-color);
   color: var(--light-color);
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
-  --dark-color: #0a0b04;
+  --dark-color: #050505;
   --grey-color: #131313;
   --light-color: #f2f2f2;
   --main-color-dark: #a49e12;
@@ -112,7 +112,7 @@ nav #logo img {
   height: 40px;
   width: auto;
   display: block;
-  padding-bottom: 5px;
+  
 }
 
 body {
@@ -131,6 +131,7 @@ h2 {
 }
 
 main {
+  background-color: ;
   margin: 10%; /* Center the main content */
   box-sizing: border-box; /* Ensure padding is included in the width */
 }
@@ -204,7 +205,6 @@ hr.short {
   list-style-type: none; 
   font-size: rem;
 }
-
 
 
 @media (max-width: 768px) {
