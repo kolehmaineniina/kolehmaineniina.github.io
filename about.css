@@ -1,0 +1,178 @@
+/* General Styling */
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #191919;
+}
+
+/* Header */
+header nav {
+    background-color: #0a0b04;
+    padding: 20px;
+}
+
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Section: More About Me */
+#about-me {
+    background-color: #f2f2f2;
+    padding: 50px;
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* Ensure the background image is not clipped */
+}
+
+#about-me::before {
+    content: "";
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    width: 50vw;
+    height: 150%;
+    background-image: url('images/photo-1.png'); /* Replace with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure the image is behind the content */
+}
+
+#about-me h2 {
+    font-size: 2.5rem;
+    color: #0a0b04;
+    text-transform: lowercase;
+}
+
+#about-me p {
+    font-size: 1.2rem;
+    color: #353535;
+}
+
+#about-me .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0a0b04;
+    color: #f2f2f2;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Section: Standout Content (Reversed Color Scheme) */
+#standout {
+    background-color: #0a0b04;
+    padding: 50px;
+    text-align: left;
+    color: #f2f2f2;
+    position: relative;
+    overflow: hidden; /* Ensure the background image is not clipped */
+}
+
+#standout::before {
+    content: "";
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    width: 50vw;
+    height: 150%;
+    background-image: url('images/section2-image.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure the image is behind the content */
+}
+
+#standout h2 {
+    font-size: 2.5rem;
+    color: #d7dd65;
+}
+
+#standout p {
+    font-size: 1.2rem;
+    color: #f2f2f2;
+}
+
+#standout .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d7dd65;
+    color: #0a0b04;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Section: Work Process with Photo Grid */
+#work-process {
+    background-color: #f2f2f2;
+    padding: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+#work-process::before {
+    content: "";
+    position: absolute;
+    left: -10vw;
+    top: 0;
+    width: 50vw;
+    height: 150%;
+    background-image: url('images/section3-image.jpg'); /* Replace with your image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+}
+
+.grid-container {
+    display: flex;
+    padding-left: 50px; /* Space between the image and content */
+}
+
+.grid-images {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.grid-images img {
+    width: 100%;
+    height: auto;
+}
+
+.grid-container .content {
+    flex: 1;
+    padding-left: 50px;
+}
+
+.grid-container .content h2 {
+    font-size: 2.5rem;
+    color: #0a0b04;
+}
+
+.grid-container .content p {
+    font-size: 1.2rem;
+    color: #353535;
+}
+
+/* Footer */
+footer {
+    background-color: #0a0b04;
+    color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+}

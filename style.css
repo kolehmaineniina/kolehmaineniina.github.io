@@ -121,14 +121,24 @@ body {
   align-items: center;
 
 }
- 
+
+main {
+  margin-top: 50px;
+}
 
 main h2 {
   margin-left: 10%;
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 10px;
   text-transform: lowercase;
+}
+
+main h3 {
+  margin-left: 10%;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 main p {
@@ -226,11 +236,11 @@ hr.short {
 
 #stand-out {
   text-align: left;
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-family: 'DM sans', sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
   line-height: 1.2;
-  padding: 30px 0px 40px 0px;
+  padding: 0px 0px 40px 0px;
 }
 
 #stand-out p {
@@ -242,10 +252,42 @@ hr.short {
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
 #about-preview p {
   font-size: 1rem;
   margin-bottom: 30px;
   margin-top: 10px;
+}
+
+#about-intro {
+  padding-top: 30px;
+}
+
+#about-intro-content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 50px;
+}
+
+#about-intro img {
+  max-width: 40%;
+  margin-left: 10%;
+}
+
+#about-intro p {
+  
+}
+
+#about-process {
+  background-color: var(--light-color);
+  color: var(--dark-color)
+}
+
+#work-projects {
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #work-preview {
@@ -254,7 +296,6 @@ hr.short {
   gap: 20px; 
   padding: 20px 0 20px 0;
 }
-
 
 .work-item {
   width: 80%; /* Take full available width */
@@ -315,17 +356,41 @@ hr.short {
   border-bottom: 1px solid var(--main-color-light);
 }
 
+@media (min-width: 1024px) {
+  #work-projects {
+    max-width: 80%;
+    margin: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
+    gap: 20px; /* Space between grid items */
+  }
+
+  .work-item {
+    min-height: ;
+    width: 100%; /* Allow grid to manage the width */
+    background-color: #abaaab;
+    color: var(--dark-color);
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+  }
+
+  .work-header {
+   margin: 10px;
+  }
+}
+
 
 footer {
   bottom: 0;
   z-index: 1000;
+  margin-top: 100px;
 }
 
 footer #stand-out{
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 4rem;
-  margin-bottom: -40px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   color: var(--accent-color-light);
 }
 
@@ -337,7 +402,7 @@ footer p {
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: var(--main-color-light);
-  margin-bottom: 20px;
+  margin: 40px 0px;
   cursor: pointer;
   font-family: 'Caveat';
   font-size: 1.5rem;
@@ -375,7 +440,7 @@ footer p {
   justify-content: space-between;
   align-items: center; /* Vertically centers all items */
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  padding: 20px 5vw;
+  padding: 0px 5vw;
 }
 
 .footer-content {
