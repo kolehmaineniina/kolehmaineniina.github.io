@@ -45,37 +45,30 @@
   background-color: var(--dark-color);
   color: var(--light-color);
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
-  --dark-color: #050505;
-  --grey-color: #131313;
+  --dark-color: #151515;
+  --grey-color: #1c1c1c;
   --light-color: #f2f2f2;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
   --accent-color: hsl(335, 86%, 63%); 
-  --accent-color-light: hsl(335, 86%, 75%); 
+  --accent-color-light: hsl(337, 27%, 79%); 
   --accent-color-dark: hsl(335, 85%, 25%);
 
   }
 
 .container {
   max-width: 90vw;
-  height: 100%; 
-  margin: 0 auto;  
-  padding: 0 20px;
+  height: 100%;  
   display: flex;
   justify-content: space-between;
   align-items: center; 
+  padding: 0 20px;
 }
 
 @media (max-width: 768px) {
   .container {
       max-width: 90vw; 
   }
-}
-
-
-ul {
-  list-style: none;
-  padding: 0;
 }
 
 nav {
@@ -86,13 +79,15 @@ nav {
   width: 100%;
   background-color: var(--dark-color);
   border-bottom: 1px solid var(--main-color-light);
+  margin: 0;
+  padding: 0;
   
 }
 
 nav ul {
   display: flex; 
   list-style: none; 
-  gap: 20px;
+  gap: 10px;
   margin: 0; 
   padding: 0; 
 }
@@ -104,15 +99,19 @@ nav li {
 nav a {
     font-family: 'Source Sans 3', sans-serif;
     font-weight: 800;
+    font-size: 1.2rem;
     text-transform: lowercase;
-    color: var(--light-color)
+    text-decoration: none;
+    color: var(--light-color);
+    padding: 0;
+    margin: 0;
 }
 
 nav #logo img {
-  height: 40px;
+  height: 50px;
   width: auto;
-  display: block;
-  
+  display: flex;
+
 }
 
 body {
@@ -120,31 +119,32 @@ body {
   font-size: 16px;            
   line-height: 1.5;                          
   align-items: center;
+
 }
+ 
 
-
-h2 {
+main h2 {
+  margin-left: 10%;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 2rem;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   text-transform: lowercase;
 }
 
-main {
-  background-color: ;
-  margin: 10%; /* Center the main content */
-  box-sizing: border-box; /* Ensure padding is included in the width */
+main p {
+  margin: 0 10%;
 }
 
-a {
+main a {
   padding-top: 20px;
-  font-family: 'Caveat', serif;
+  font-family: 'Caveat', sans-serif;
   color: var(--main-color-light);
   font-size: 1.1rem;
   font-weight: 700; 
   transition: font-size 0.3s ease;
   text-transform: uppercase; 
   text-decoration: none;
+  margin: 0 10%;
   
   }
   
@@ -165,45 +165,50 @@ hr {
   border: none;
   border-top: 3px solid var(--grey-color);
   background-color: transparent;
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 hr.short {
   width: 40px;
-  margin: 25px 0;
+  
 }
 
 
 #hero {
   display: flex;
   align-items: center; 
-  background-image: url('images/hero_image-1.png'); /* Set the image as the background */
-  background-size: cover; /* Make sure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-image: url('images/hero_image.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   height: 100vh; 
-  text-align: left; /* Center text */
+  text-align: left; 
+  margin-bottom: 30px;
 }
 
 #hero .hero-text {
   margin: 10%;
-  max-width: 45%;
+  max-width: 30%;
 }
 
 #hero h1 {
-  font-family:'Source Sans 3';
+  font-family:'DM Sans';
   font-size: 4rem;
-  font-weight: 00;
-  text-transform:lowercase;
-  line-height: 1.2;
-  margin-left: 0 0 10px 0; 
+  font-weight: 800;
+  text-transform:uppercase;
+  line-height: 1; 
   
 }
 
+#hero p {
+  margin-top: 0;
+  padding-top: 0;
+}
 #hero ul {
   font-family: 'Source Sans 3';
   list-style-type: none; 
-  font-size: rem;
+  padding: 0;
+  
 }
 
 
@@ -225,7 +230,7 @@ hr.short {
   font-size: 2.5rem;
   font-weight: 600;
   line-height: 1.2;
-  margin-bottom: 10px;
+  padding: 30px 0px 40px 0px;
 }
 
 #stand-out p {
@@ -233,29 +238,34 @@ hr.short {
   color:  #d7dd65;
 }
 
-
+#about-preview {
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
 #about-preview p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 30px;
+  margin-top: 10px;
 }
 
 #work-preview {
   display: flex;
   flex-direction: column; 
   gap: 20px; 
-  background-color: ;
+  padding: 20px 0 20px 0;
 }
 
+
 .work-item {
-  width: 100%; /* Take full available width */
-  background-color: var(--grey-color);
-  color: var(--light-color);
-  border: 1px solid var(--main-color-light);
+  width: 80%; /* Take full available width */
+  background-color: #abaaab;
+  color: var(--dark-color);
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
+  margin-left: 10%;
 }
 
 .work-item:hover {
@@ -275,7 +285,7 @@ hr.short {
 
 .work-header h3, .work-header p {
   margin: 0;
-  color: var(--light-color);
+  color: var(--dark-color);
 }
 
 .work-details {
@@ -313,9 +323,10 @@ footer {
 
 footer #stand-out{
   font-family: 'Source Sans 3', sans-serif;
-  font-size: 2rem;
-  margin-bottom: 15px;
-  text-transform: lowercase;
+  font-size: 4rem;
+  margin-bottom: -40px;
+  text-transform: uppercase;
+  color: var(--accent-color-light);
 }
 
 footer p {
@@ -335,9 +346,11 @@ footer p {
 }
 
 #contact-box a {
+  text-decoration: none;
   line-height: 3;
   font-family: 'Caveat';
-  color: #f2f2f2;
+  font-weight: 700;
+  color: var(--light-color);
   font-size: 1.5rem; 
   margin: 10vw; 
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
@@ -350,7 +363,7 @@ footer p {
 
 #contact-box:hover{
   cursor: pointer;
-  background-color: #131313;
+  background-color: var(--grey-color);
 }
 
 #contact-box:hover a i {
@@ -362,7 +375,7 @@ footer p {
   justify-content: space-between;
   align-items: center; /* Vertically centers all items */
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  padding: 20px 10vw;
+  padding: 20px 5vw;
 }
 
 .footer-content {
@@ -373,7 +386,7 @@ footer p {
 ul.contact-info {
   font-size: 0.8rem;
   line-height: 2;
-  margin-left: 0 0 10px 0; /* Adjust as necessary for spacing */
+ 
 }
 
 ul.socials {
@@ -391,7 +404,7 @@ ul.socials li a img {
 #footer-logo { /* Specific ID for logo image */
   height: 150px; /* Adjust logo size as needed */
   width: auto;
-  margin-right: -2vw;
+  padding-left: 20px;
 }
 
 @media (max-width: 768px) {
