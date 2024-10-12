@@ -47,12 +47,12 @@
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
   --dark-color: #151515;
   --grey-color: #1c1c1c;
-  --light-color: #f2f2f2;
+  --light-color: #e0e0e0;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
-  --accent-color: hsl(335, 86%, 63%); 
+  --accent-color: hsl(335, 71%, 44%); 
   --accent-color-light: hsl(337, 27%, 79%); 
-  --accent-color-dark: hsl(335, 85%, 25%);
+  --accent-color-dark: hsl(335, 48%, 76%);
 
   }
 
@@ -158,7 +158,7 @@ main a {
   
   }
   
-a:hover {
+main a:hover {
 font-size: 1.2rem; 
 }
 
@@ -274,44 +274,63 @@ hr.short {
   margin-left: 10%;
 }
 
-#about-intro p {
+#about-intro text {
   
 }
 
+@media (max-width: 768px) {
+
+p {
+  line-height: 1.8;
+}
+
+#about-intro-content {
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center everything */
+  text-align: center;
+  gap:20px;
+}
+
+#about-intro img {
+  max-width: 100%;
+}
+  
 #about-process {
   background-color: var(--light-color);
   color: var(--dark-color)
+}
 }
 
 #work-projects {
   padding-top: 50px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
+
 }
 
 #work-preview {
   display: flex;
   flex-direction: column; 
   gap: 20px; 
-  padding: 20px 0 20px 0;
 }
 
 .work-item {
-  width: 80%; /* Take full available width */
-  background-color: #abaaab;
-  color: var(--dark-color);
+  width: 60%; /* Take full available width */
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  margin-left: 10%;
+
+
 }
 
 .work-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  
 }
 
 .work-header {
@@ -319,14 +338,33 @@ hr.short {
   background-size: cover;
   background-position: center;
   text-align: left;
-  font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Dm sans', sans-serif;
   font-weight: 700;
-  text-transform: lowercase;
 }
 
 .work-header h3, .work-header p {
   margin: 0;
-  color: var(--dark-color);
+}
+
+.work-header h3 {
+  font-family: 'dm sans';
+  font-weight: 500;
+  font-size: 2rem;
+  padding-bottom: 10px;
+  text-transform: lowercase;
+  
+}
+
+.work-header p {
+  padding: 5px 5px 15px 5px;
+  min-height: 30px;
+  font-family: 'dm sans';
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.1;
+  color: #151515;
+  background-color: var(--accent-color-light);
+  border-radius: 5px;
 }
 
 .work-details {
@@ -355,33 +393,6 @@ hr.short {
 .expanded .work-header {
   border-bottom: 1px solid var(--main-color-light);
 }
-
-@media (min-width: 1024px) {
-  #work-projects {
-    max-width: 80%;
-    margin: 0 5%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Flexible grid */
-    gap: 20px; /* Space between grid items */
-  }
-
-  .work-item {
-    min-height: ;
-    width: 100%; /* Allow grid to manage the width */
-    background-color: #abaaab;
-    color: var(--dark-color);
-    border-radius: 5px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
-  }
-
-  .work-header {
-   margin: 10px;
-  }
-}
-
 
 footer {
   bottom: 0;
@@ -422,7 +433,7 @@ footer p {
 }
 
 #contact-box a i {
-  margin-left: 10px; /* Space between text and arrow */
+  margin-left: 10px; 
   transition: margin-left 0.5s ease;
 }
 
@@ -440,7 +451,7 @@ footer p {
   justify-content: space-between;
   align-items: center; /* Vertically centers all items */
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  padding: 0px 5vw;
+  padding: 0px 10vw;
 }
 
 .footer-content {
@@ -461,6 +472,7 @@ ul.socials {
   
 }
 
+
 ul.socials li a img {
   width: 40px;
   height: 40px;
@@ -469,7 +481,6 @@ ul.socials li a img {
 #footer-logo { /* Specific ID for logo image */
   height: 150px; /* Adjust logo size as needed */
   width: auto;
-  padding-left: 20px;
 }
 
 @media (max-width: 768px) {
@@ -478,12 +489,5 @@ ul.socials li a img {
     align-items: center; /* Center everything */
     text-align: center;
   }
-
-  ul.contact-info, ul.socials {
-    margin: 10px 0;
-  }
-
-  #footer-info img {
-    margin: 0 auto 10px auto; /* Center logo on smaller screens */
-  }
 }
+
