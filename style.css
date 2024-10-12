@@ -162,7 +162,7 @@ main a:hover {
 font-size: 1.2rem; 
 }
 
-a:visited {
+main a:visited {
   color: var(--main-color-dark);
 }
 
@@ -274,10 +274,6 @@ hr.short {
   margin-left: 10%;
 }
 
-#about-intro text {
-  
-}
-
 @media (max-width: 768px) {
 
 p {
@@ -301,76 +297,117 @@ p {
 }
 }
 
-#work-projects {
-  padding-top: 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-
+#work-intro {
+  padding: 0 30px;
 }
 
-#work-preview {
+#work-intro a {
+  padding-top: 40px;
+}
+
+#work-projects {
   display: flex;
-  flex-direction: column; 
-  gap: 20px; 
+  flex-wrap: wrap;           /* Allow items to wrap into rows */
+  justify-content: center;    /* Center the items horizontally */
+  gap: 20px;                  /* Add space between the items */
+  max-width: 90vw;            /* Keep content within 90vw of the viewport */
+  box-sizing: border-box;     /* Ensure padding and borders are included in the width */
+  margin: 0 auto;             /* Center the entire #work-projects section */
 }
 
 .work-item {
-  width: 60%; /* Take full available width */
+  flex: 1 1 auto;             /* Allow items to flex based on their content */
   border-radius: 5px;
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-
-
+  padding: 20px;
 }
+
+@media (max-width: 768px) {
+  .work-item {
+    flex: 1 1 100%;           /* On smaller screens, each item takes the full width */
+    max-width: 100%;          /* Ensure the width is 100% */
+    height: auto;             /* Adjust height to be responsive */
+  }
+}
+
 
 .work-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #1a1a1a;
   
 }
 
-.work-header {
-  padding: 20px;
-  background-size: cover;
-  background-position: center;
-  text-align: left;
-  font-family: 'Dm sans', sans-serif;
-  font-weight: 700;
+#work-preview {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  gap: 30px;
 }
 
-.work-header h3, .work-header p {
-  margin: 0;
+
+
+.work-header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  align-items: center;
+  text-align: center;
+  font-family: 'Dm sans', sans-serif;
+  font-weight: 700;
+  
+}
+
+.work-header-image {
+  padding-bottom: 5px;
+  width: 100%;   /* Make the image take full width of the header */
+  height: auto;  /* Maintain the image's aspect ratio */
+  overflow: hidden; /* Hide any overflow to ensure containment */
+}
+
+.work-header-image img {
+  width: 100%;    /* Ensure the image takes the full width of the container */
+  height: 100%;   /* Ensure it stretches to the height of the container */
+  object-fit: cover; /* This will ensure the image covers the container, cropping if necessary */
+}
+
+.work-header-text {
+  width: 100%;
 }
 
 .work-header h3 {
+  padding: 0px 10px;
+  margin: 0;
+  line-height: 1.1;
   font-family: 'dm sans';
   font-weight: 500;
-  font-size: 2rem;
-  padding-bottom: 10px;
+  font-size: 1.5rem;
   text-transform: lowercase;
   
 }
 
 .work-header p {
-  padding: 5px 5px 15px 5px;
-  min-height: 30px;
+  padding: 5px 0px;
   font-family: 'dm sans';
-  font-size: 1rem;
+  font-size: 1;
   font-weight: 500;
   line-height: 1.1;
-  color: #151515;
-  background-color: var(--accent-color-light);
+  color: var(--accent-color-light);
   border-radius: 5px;
 }
 
 .work-details {
+  margin: 0;
   display: none;
-  padding: 20px;
-  background-color: var(--dark-color);
+  padding: 0px;
+  text-align: center;
+  font-size: smaller;
 }
 
 .work-details p {
@@ -379,12 +416,6 @@ p {
   line-height: 1.5;
 }
 
-.work-details img {
-  width: 100%;
-  height: auto;
-  margin-top: 15px;
-  border-radius: 5px;
-}
 
 .expanded .work-details {
   display: block;
@@ -394,26 +425,22 @@ p {
   border-bottom: 1px solid var(--main-color-light);
 }
 
-footer {
-  bottom: 0;
-  z-index: 1000;
-  margin-top: 100px;
+#contact {
+  margin: 0 10vw;
+  padding: 0;
 }
 
-footer #stand-out{
-  text-transform: lowercase;
-  color: var(--accent-color-light);
+#contact #stand-out {
+  padding: 0;
+  margin-bottom: 0;
 }
 
-footer p {
-  margin: 20px 10vw;
-}
 
 #contact-box {
   border-top: 1px solid;
   border-bottom: 1px solid;
   border-color: var(--main-color-light);
-  margin: 40px 0px;
+  margin-top: 40px;
   cursor: pointer;
   font-family: 'Caveat';
   font-size: 1.5rem;
@@ -432,8 +459,7 @@ footer p {
   transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
 }
 
-#contact-box a i {
-  margin-left: 10px; 
+#contact-box a i { 
   transition: margin-left 0.5s ease;
 }
 
@@ -446,48 +472,67 @@ footer p {
   margin-left: 35px; 
 }
 
+
+
 #footer-info {
+  margin-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center; /* Vertically centers all items */
+  text-align: center;
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
-  padding: 0px 10vw;
+  
 }
 
 .footer-content {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  align-items: center; 
+
 }
 
 ul.contact-info {
-  font-size: 0.8rem;
-  line-height: 2;
- 
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  
 }
 
 ul.socials {
+  width: 100%;
   display: flex;
   gap: 15px;
   align-items: center; /* Vertically center the social icons */
-  
+  max-width: 80vw;
+  padding-bottom: 10px;
 }
 
 
 ul.socials li a img {
-  width: 40px;
-  height: 40px;
+  max-width: 60px;
+  height: auto;
+  display: block; /* Ensure it's treated as a block element */
+  flex: 1 1 auto; 
 }
 
 #footer-logo { /* Specific ID for logo image */
-  height: 150px; /* Adjust logo size as needed */
+  height: 100px; /* Adjust logo size as needed */
   width: auto;
+  padding-top: 10px;;
+
 }
 
 @media (max-width: 768px) {
   #footer-info {
+    margin: 0;
+    padding: 0;
     flex-direction: column; /* Stack elements vertically */
     align-items: center; /* Center everything */
     text-align: center;
   }
+
+  
 }
 
