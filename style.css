@@ -92,7 +92,7 @@
     margin: 0; 
     padding: 0;
   }
-  
+
   nav li {
     margin: 0;
   }
@@ -113,14 +113,19 @@
     font-size: 30px;
     cursor: pointer;
   }
+
+  #nav-links {
+    display: flex; 
+    justify-content: space-between;
+  }
   
   @media (max-width: 768px) {
-    /* Hide the default nav links and show the hamburger icon */
+
     #nav-links {
-      display: none; /* Hide the nav links by default */
-      flex-direction: column; /* Make them vertical when shown */
+      display: none; 
+      flex-direction: column; 
       position: absolute;
-      top: 50px; /* Place it under the nav bar */
+      top: 50px; 
       left: 0;
       width: 100%;
       background-color: var(--dark-color);
@@ -133,12 +138,12 @@
     }
   
     .hamburger {
-      display: block; /* Show the hamburger icon on small screens */
+      display: block; 
     }
   
-    /* Show the menu when the hamburger is clicked */
+   
     #nav-links.active {
-      display: flex; /* Show the nav links vertically */
+      display: flex; 
     }
   }
   
