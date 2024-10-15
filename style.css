@@ -53,14 +53,86 @@
   color: var(--light-color);
   font-family: 'DM Sans', 'Verdana', 'Arial', sans-serif;
   --dark-color: #151515;
-  --grey-color: #1c1c1c;
+  --grey-color-dark: #2c2c2c;
+  --grey-color-light: #a0a0a0;
   --light-color: #e0e0e0;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
   --accent-color: hsl(335, 71%, 44%); 
   --accent-color-light: hsl(337, 27%, 79%); 
   --accent-color-dark: hsl(335, 41%, 78%);
+  --test-color: #6a95de;
+  }
 
+  .light-theme {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+  }
+
+  body {
+    padding-left: 0;
+    margin: 0 0;
+  }
+
+  main {
+    margin-top: 50px;
+  }
+
+main h1 {
+    font-size: 3rem;
+    text-transform: lowercase;
+  }
+  
+  main h2 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 2.5rem;
+    text-transform: lowercase;
+    
+  }
+  
+  main h3 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+  
+  
+  main a {
+    padding-top: 20px;
+    font-family: 'Caveat', sans-serif;
+    color: var(--main-color-light);
+    font-size: 1.1rem;
+    font-weight: 700; 
+    transition: font-size 0.3s ease;
+    text-transform: uppercase; 
+    text-decoration: none;
+    margin: 0 10%;
+    
+    }
+    
+  main a:hover {
+  font-size: 1.2rem; 
+  }
+  
+  main a:visited {
+    color: var(--main-color-dark);
+  }
+  
+ ul {
+    list-style-type: none;
+    display: block;
+  }
+  
+  main hr {
+    border: none;
+    border-top: 3px solid var(--grey-color);
+    background-color: transparent;
+    margin: 25px 0;
+  }
+  
+  main hr.short {
+    width: 40px;
+    
   }
 
   nav {
@@ -188,61 +260,6 @@
   }
   
 
-main {
-  margin-top: 50px;
-}
-
-main h2 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 2.5rem;
-  text-transform: lowercase;
-}
-
-main h3 {
-  font-family: 'Source Sans 3', sans-serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-
-main a {
-  padding-top: 20px;
-  font-family: 'Caveat', sans-serif;
-  color: var(--main-color-light);
-  font-size: 1.1rem;
-  font-weight: 700; 
-  transition: font-size 0.3s ease;
-  text-transform: uppercase; 
-  text-decoration: none;
-  margin: 0 10%;
-  
-  }
-  
-main a:hover {
-font-size: 1.2rem; 
-}
-
-main a:visited {
-  color: var(--main-color-dark);
-}
-
-ul {
-  list-style-type: none;
-  display: block;
-}
-
-hr {
-  border: none;
-  border-top: 3px solid var(--grey-color);
-  background-color: transparent;
-  margin: 25px 0;
-}
-
-hr.short {
-  width: 40px;
-  
-}
-
 /*
 #hero {
   display: flex;
@@ -334,13 +351,62 @@ hr.short {
   margin-top: 10px;
 }
 
+
 #about-intro {
+  display: block;
+  padding: 50px 10vw 50px 10vw;
+}
+
+#about-content {
+  padding: 50px 10vw 50px 10vw;
+  
+}
+
+#about-content h2 {
+  margin-top: auto;
+}
+
+#about-content-main {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  flex-wrap: wrap;
+  gap: 5vw;
+  align-items: stretch;
+  
+}
+
+@media (max-width: 768px) {
+  #about-content-main {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items on smaller screens */
+  }
+
+  #about-content-main-image, #about-content-main-texts {
+    width: 100%; /* Flex items take full width on small screens */
+  }
+
+  #about-content-main-image img {
+    width: 100%; /* Ensure the image scales properly on small screens */
+  }
+}
+
+#about-content-main-image {
+  flex: 1;
+  background-color: #6a95de;
+
+}
+
+#about-content-main-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+#about-content-main-texts {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
 }
 
 
@@ -382,20 +448,7 @@ hr.short {
   flex-direction: column;
   max-width: 100vw;
   padding: 0;
-  margin-left: 10vw;
-}
-
-
-
-#work-intro h2 {
-  max-width: 90%;
-  margin-top: 50px;
-  margin-bottom: 20px;
-}
-
-#work-intro p {
-  margin-top: 0;
-  max-width: 90%;
+  padding: 50px 10vw 50px 10vw;
 }
 
 #work-projects {
@@ -548,7 +601,7 @@ hr.short {
 
 footer {
   margin-bottom: 30px;
-  100vw;
+  width: 100%;
 }
 
 #contact-box {
@@ -557,7 +610,7 @@ footer {
   line-height: 80px;
   border-top: 4px double;
   border-bottom: 4px double;
-  border-color: var(--accent-color-dark);
+  border-color: var(--grey-color-light);
   padding: 10px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -585,13 +638,9 @@ footer {
 
 #contact-box:hover{
   cursor: pointer;
-  background-color: var(--accent-color-light);
-  border-color: #151515;
+  background-color: var(--grey-color-dark);
 }
 
-#contact-box:hover a  {
-  color: var(--dark-color);
-}
 
 #contact-box:hover a i {
   margin-left: 35px; 
