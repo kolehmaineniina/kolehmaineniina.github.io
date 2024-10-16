@@ -282,6 +282,7 @@ nav #logo img {
   background-repeat: no-repeat; 
   height: calc(100vh - 50px);
   width: auto;
+  padding-top: 50px;
   overflow: hidden;
 }
 
