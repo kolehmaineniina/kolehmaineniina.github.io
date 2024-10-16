@@ -281,7 +281,9 @@ nav #logo img {
   background-position: center; 
   background-repeat: no-repeat; 
   height: calc(100vh - 50px);
+  width: auto;
   padding-top: 50px;
+  overflow: hidden;
 }
 
 #hero-text {
@@ -291,6 +293,7 @@ nav #logo img {
   height: 100%;
   justify-content:space-between;
   gap:5%;
+  margin-left: 5vw;
   
 }
 
@@ -299,7 +302,6 @@ nav #logo img {
   width: fit-content;
   height: fit-content;
   padding: 0;
-  margin-left: 5vw;
   margin-top: 5vw;
 }
 
@@ -320,8 +322,6 @@ nav #logo img {
 #hero-text-2 {
   display: flex;
   flex-direction: column;
-  margin-left: 5vw;
-  width: fit-content;
   height: 50%;
   gap: 10px;
 }
@@ -333,7 +333,7 @@ nav #logo img {
   font-weight: 200;
   line-height: 1.4;
   margin: 0;
-  padding-right: 50px;
+
 }
 
 #hero-text-2 p {
@@ -345,24 +345,37 @@ nav #logo img {
 @media (max-width: 768px) {
 
   #hero {
+    background-color: #8b7f7f;
     background-image: none;
+    height: 100vh;
+    justify-content: center;
   }
   
-  #hero-text{
-    max-width: 80vw;
+  #hero-text {
+    margin-left: 0;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: auto;
+    align-items: center;
+    background-color: #6a95de;
+    text-align: center;
+  }
+
+  #hero-text-2 h2{
+    font-size: 3.5rem;
+
   }
 
   #hero-text-2 p {
-    padding: 0;
-    margin: 0;
-    align-self: flex-start;
+    align-self: center;
   }
 
 }
 
 .signature {
   font-family: 'Caveat';
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-style: italic;
 }
 
@@ -372,8 +385,8 @@ nav #logo img {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2;
-  padding: 0px 0px 0px 0px;
   color:  #d7dd65;
+  padding: 10px 10vw 10px 10vw;
 }
 
 
@@ -384,14 +397,17 @@ nav #logo img {
 }
 
 #about-preview {
-  margin-bottom: 30px;
-  margin-top: 30px;
+  padding: 10px 10vw 10px 10vw;
 }
 
 #about-preview p {
   font-size: 1rem;
   margin-bottom: 30px;
   margin-top: 10px;
+}
+
+#work-preview {
+  padding: 10px 10vw 10px 10vw;
 }
 
 #about-content-main {
@@ -454,10 +470,6 @@ nav #logo img {
 
 #design-process {
   padding: 50px 10vw 50px 10vw;
-}
-
-#design-process h2{
-  
 }
 
 #process-items {
