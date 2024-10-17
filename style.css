@@ -74,7 +74,7 @@
 }
 
 .page-title {
-  padding: 70px 15vw 0 15vw;
+  padding: 10vh 15vw 2vh 15vw;
   margin-bottom: 0;
 }
 
@@ -178,17 +178,17 @@ nav {
   top: 0;
   left: 0vw;
   z-index: 1000;
-  height: 50px;
+  height: 60px;
   width: 100%;
   background-color: var(--dark-color);
-  border-bottom: 1px solid var(--main-color-light);
+  border-bottom: 2px solid var(--grey-color-light);
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 95%;
-  height: 50px;  
+  max-width: 92.5%;
+  height: 60px;  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -237,23 +237,23 @@ nav a:hover {
 @media (max-width: 768px) {
 
   .container {
-    max-width: 90vw;
+    max-width: 85vw;
   }
 
   #nav-links {
     display: none; 
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap; 
     position: absolute;
-    top: 50px;
+    top: 15px;
     padding-bottom: 7px; 
     left: 0;
     width: 100%;
     background-color: var(--dark-color);
-    border-bottom: 1px solid var(--main-color-light);
+    border-bottom: 2px solid var(--grey-color-light);
     justify-content: center;
     text-align: center;
-    gap: 15px;
+    gap: 0px;
     z-index: 1001;
   }
 
@@ -269,7 +269,8 @@ nav a:hover {
   }
 
   .hamburger {
-    display: block; 
+    display: block;
+    z-index: 1002; 
   }
   
   #nav-links.active {
@@ -305,10 +306,10 @@ nav #logo img {
   background-size: cover; 
   background-position: center; 
   background-repeat: no-repeat; 
-  height: calc(100vh - 50px);
+  height: calc(100vh - 60px);
   width: auto;
   overflow: hidden;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 #hero-text {
@@ -318,7 +319,7 @@ nav #logo img {
   height: 100%;
   justify-content:space-between;
   gap:5%;
-  margin-left: 15vw;
+  margin-left: 10vw;
 }
 
 #hero-text-1 {
@@ -332,7 +333,7 @@ nav #logo img {
 #hero h1 {
   font-family:'Lexend';
   font-size: 1.5rem;
-  font-weight: 200;
+  font-weight: 300;
   text-transform:uppercase;
   color: var(--main-color-light);
   line-height: 1.5;
@@ -346,7 +347,7 @@ nav #logo img {
 #hero-text-2 {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 55%;
   gap: 10px;
 
 }
@@ -355,7 +356,7 @@ nav #logo img {
   font-size: 4rem;
   font-family:'Lexend';
   text-transform: uppercase;
-  font-weight: 200;
+  font-weight: 300;
   line-height: 1.4;
   margin: 0;
 
@@ -363,8 +364,9 @@ nav #logo img {
 
 #hero-text-2 p {
   padding: 0;
-  margin: 0;
+  margin: 10px;
   align-self: flex-end;
+
 }
 
 @media (max-width: 768px) {
@@ -380,7 +382,7 @@ nav #logo img {
   
   #hero-text {
     margin-left: 0;
-    max-height: 100%;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
     max-width: auto;
@@ -390,11 +392,9 @@ nav #logo img {
 
   #hero-text-2 {
     margin: 0;
-
   }
   #hero-text-2 h2{
-    font-size: 3.5rem;
-    
+    font-size: 3.5rem; 
   }
 
   #hero-text-2 p {
@@ -404,9 +404,10 @@ nav #logo img {
 }
 
 .signature {
-  font-family: 'Caveat';
-  font-size: 1.8rem;
-  font-style: italic;
+  font-family: 'Oooh Baby';
+  font-size: 2rem;
+  font-style: oblique;
+  color: var(--main-color-light);
 }
 
 .stand-out {
@@ -426,11 +427,11 @@ nav #logo img {
 }
 
 #home-intro {
-  padding: 20px 15vw 10px 15vw;
+  padding: 5vh 15vw 5vh 15vw;
 }
 
 #about-preview {
-  padding: 10px 15vw 10px 15vw;
+  padding: 5vh 15vw 5vh 15vw;
 
 }
 
@@ -477,13 +478,13 @@ nav #logo img {
   font-weight: 400;
 }
 
-#box-paragraph {
-  margin: 0;
-  padding: 0px 0;
+#box-paragraph p {
+  padding: 20px 0;
 }
 
 #box-texts a {
-  color: var(--main-color-light)
+  color: var(--main-color-light);
+  padding-top: 0px;
 }
 
 @media (max-width: 768px) {
@@ -503,7 +504,7 @@ nav #logo img {
 }
 
 #work-preview {
-  padding: 50px 15vw 50px 15vw;
+  padding: 5vh 15vw 5vh 15vw;
 
 }
 
@@ -514,7 +515,7 @@ nav #logo img {
   flex-wrap: wrap;
   gap: 5vw;
   align-items: stretch;
-  padding: 20px 15vw 50px 15vw;
+  padding: 5vh 15vw 7vh 15vw;
   justify-content: center;
  
 }
@@ -560,7 +561,7 @@ nav #logo img {
 }
 
 #design-process {
-  padding: 20px 15vw 40px 15vw;
+  padding: 5vh 15vw 5vh 15vw;
 }
 
 #design-process h2{
@@ -568,7 +569,7 @@ nav #logo img {
 }
 
 #process-items {
-  padding: 10px 5vw 10px 5vw;
+  padding: 5vh 5vw 5vh 5vw;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -632,7 +633,7 @@ nav #logo img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 15vw;
+  padding: 8vh 15vw;
   gap: 10px;
   
 }
@@ -661,7 +662,8 @@ nav #logo img {
   gap: 20px;                     
   margin: 0 auto;
   box-sizing: border-box;
-  padding: 50px 0;
+  padding: 5vh 0;
+  margin-bottom: 5vh;
   background-color: var(--dark-color);
 }
 
@@ -726,19 +728,19 @@ nav #logo img {
 .work-header h3 {
   padding: 0;
   margin: 0;
-  line-height: 1.1;
+  line-height: 1.4;
   font-family: 'dm sans';
   font-weight: 500;
-  color: var(--main-color-light);
+  color: var(--accent-color-light);
 }
 
 .work-header p {
   margin: 0;
   padding: 15px;
   font-family: 'dm sans';
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
-  line-height: 1.1;
+  line-height: 1.4;
   color: var(--light-color);
   border-radius: 5px;
 }
@@ -755,8 +757,8 @@ nav #logo img {
 .work-details p {
   font-family: 'DM Sans', sans-serif;
   font-size: 1.1rem;
-  line-height: 1.5;
-  font-weight: 300;
+  line-height: 1.4;
+  font-weight: 200;
   color: var(--light-color);
   margin: 0;
 }
@@ -779,7 +781,7 @@ nav #logo img {
   text-align: flex-start; 
   box-sizing: border-box;
   margin: 0 auto;
-  padding: 60px 0;
+  padding: 10vh 0;
   
 }
 
@@ -790,8 +792,7 @@ nav #logo img {
   font-weight: 500;
   line-height: 1.2;
   color: var(--accent-color-light);
-  margin: 0 15vw;
-
+  margin: 2vh 15vw;
 }
 
 #contact-text {
@@ -814,7 +815,7 @@ footer {
   border-bottom: 6px double;
   border-color: var(--grey-color-light);
   background-color: #1a1a1a;
-  padding: 10px;
+  padding: 15px;
   margin-bottom: 30px;
   cursor: pointer;
   text-transform: uppercase;
@@ -864,7 +865,7 @@ footer {
   text-align: center;
   flex-wrap: wrap; /* Allows wrapping for smaller screens */
   gap:30px;
-
+  padding-top: 4vh;
 }
 
 .footer-content {
