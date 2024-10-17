@@ -148,18 +148,27 @@ h3 {
 a {
   font-family: 'Caveat', serif;
   color: var(--main-color-light);
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700; 
   transition: font-size 0.3s ease;
   text-transform: uppercase; 
   text-decoration: none;
   
-  }
+}
   
 a:hover {
-font-size: 1.5rem; 
+font-size: 1.6rem; 
 }
 
+@media (max-width: 768px) {
+  a {
+    font-size: 1.4;
+  }
+
+  a:hover {
+    font-size: 1.5;
+  }
+}
 main a:visited {
   color: var(--main-color-dark);
 }
@@ -299,6 +308,7 @@ nav #logo a {
   height: 100%;
   text-decoration: none; /* Remove underline from the link */
 }
+
 
 nav #logo img {
   height: 100%;
