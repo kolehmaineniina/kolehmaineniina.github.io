@@ -395,6 +395,7 @@ nav #logo img {
     overflow: hidden;
     padding-top: 50px;
     justify-content: center;
+    background-color: #6a95de;
   }
   
   #hero-text {
@@ -848,7 +849,7 @@ padding-bottom: 2vh;
 
 .work-details p {
   font-family: 'DM Sans', sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   line-height: 1.4;
   font-weight: 200;
   color: var(--light-color);
