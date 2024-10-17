@@ -80,7 +80,7 @@
 
 @media (max-width: 768px) {
   .page-title {
-    padding: 10vh 5vw 2vh 5vw;
+    padding: 10vh 8vw 2vh 8vw;
     margin-bottom: 0;
   }
 }
@@ -255,7 +255,7 @@ nav a:hover {
 @media (max-width: 768px) {
 
   .container {
-    max-width: 85vw;
+    max-width: 90vw;
   }
 
   #nav-links {
@@ -454,10 +454,10 @@ nav #logo img {
 
 @media (max-width: 768px) {
   #about-preview {
-    padding: 5vh 5vw 5vh 5vw;
+    padding: 5vh 8vw 5vh 8vw;
   }
   #home-intro {
-    padding: 2vh 5vw 5vh 5vw;
+    padding: 2vh 8vw 5vh 8vw;
   }
 }
 
@@ -537,7 +537,7 @@ nav #logo img {
 
 @media (max-width: 768px) {
   #work-preview {
-    padding: 5vh 5vw 5vh 5vw;
+    padding: 5vh 8vw 5vh 8vw;
   }
 }
 
@@ -556,7 +556,7 @@ nav #logo img {
   #about-content-main {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center the items on smaller screens */
-    padding: 5vh 5vw 7vh 5vw;
+    padding: 5vh 8vw 7vh 8vw;
   }
 
   #about-content-main-image, #about-content-main-texts {
@@ -593,7 +593,7 @@ nav #logo img {
 
 @media (max-width: 768px) {
   #about-highlight {
-    padding: 0 5vw 0 5vw;
+    padding: 0 8vw 0 8vw;
   }
 
   #design-process {
@@ -662,7 +662,7 @@ nav #logo img {
 @media (max-width: 768px) {
 
   #design-process {
-    padding: 5vh 5vw 5vh 5vw;
+    padding: 5vh 8vw 5vh 8vw;
   }
 
   #design-process h2 {
@@ -724,7 +724,7 @@ nav #logo img {
 @media (max-width: 768px) {
 
   .outro {
-    padding: 5vh 5vw;
+    padding: 5vh 8vw;
   }
 }
 
@@ -759,7 +759,7 @@ padding-bottom: 2vh;
 @media (max-width: 768px) {
 
   #work-intro {
-    padding: 20px 5vw 80px 5vw;
+    padding: 20px 8vw 80px 8vw;
   }
   #work-projects {
     display: flex;
@@ -880,7 +880,7 @@ padding-bottom: 2vh;
 @media (max-width: 768px) {
 
   #contact {
-    margin: 0 5vw;
+    margin: 0 8vw;
   }
 
 }
@@ -936,7 +936,7 @@ footer {
 @media (max-width: 768px) {
 
   #contact-box a {
-    margin: 2.5vw;
+    margin: 4vw;
   }
 
 }
