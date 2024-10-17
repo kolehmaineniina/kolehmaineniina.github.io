@@ -443,6 +443,11 @@ nav #logo img {
   color: var(--main-color-light);
 }
 
+@media (max-width: 768px) {
+  .stand-out {
+    font-size: 2.5rem;
+  }
+}
 
 #home-intro {
   padding: 2vh 15vw 5vh 15vw;
