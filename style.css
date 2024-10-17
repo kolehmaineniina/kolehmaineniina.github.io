@@ -368,8 +368,7 @@ nav #logo img {
 #hero-text-2 {
   display: flex;
   flex-direction: column;
-  height: 55%;
-  gap: 10px;
+  height: 50%;
 
 }
 
@@ -379,15 +378,12 @@ nav #logo img {
   text-transform: uppercase;
   font-weight: 300;
   line-height: 1.4;
-  margin-top: 0;
-  padding-top: 0;
+  margin:0;
+
 }
 
 #hero-text-2 p {
-  padding: 0;
-  margin: 10px;
   align-self: flex-end;
-
 }
 
 @media (max-width: 768px) {
