@@ -56,7 +56,7 @@
   --light-color-2: #d7d4d3;
   --main-color-dark: #a49e12;
   --main-color-light: #d7dd65;
-  --accent-color: #6a95de;
+  --accent-color: #758cb4;
   --accent-color-light: hsl(218, 57%, 79%); 
   --accent-color-dark: hsl(218, 36%, 39%);
   --test-color: #6a95de;
@@ -566,7 +566,7 @@ nav #logo img {
 #item-number {
   font-family: 'Caveat';
   font-size: 14rem;
-  color: var(--accent-color-dark);
+  color: var(--main-color-light);
   text-align: start;
   margin: 0;
   padding: 0;
@@ -575,7 +575,7 @@ nav #logo img {
   top: -45px; 
   left: -35px; 
   z-index: 1; 
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 #item-content {
@@ -711,9 +711,7 @@ nav #logo img {
   line-height: 1.1;
   font-family: 'dm sans';
   font-weight: 500;
-  font-size: 1.5rem;
-  text-transform: lowercase;
-  color: var(--accent-color-light);
+  color: var(--main-color-light);
 }
 
 .work-header p {
@@ -773,7 +771,7 @@ nav #logo img {
   font-size: 3rem;
   font-weight: 500;
   line-height: 1.2;
-  color:  var(--main-color-light);
+  color: var(--accent-color-light);
   margin: 0 10vw;
 
 }
@@ -794,10 +792,10 @@ footer {
   max-width: 100vw;
   height: 80px;
   line-height: 80px;
-  border-top: 4px double;
-  border-bottom: 4px double;
-  border-color: var(--grey-color-light);
-  background-color: var(--accent-color-light);
+  border-top: 6px double;
+  border-bottom: 6px double;
+  border-color: var(--dark-color);
+  background-color: var(--grey-color-light);
   padding: 10px;
   margin-bottom: 30px;
   cursor: pointer;
@@ -811,7 +809,7 @@ footer {
   font-family: 'Lexend';
   font-weight: 500;
   font-style: italic;
-  color: var(--dark-color);
+  color: var(--light-color);
   font-size: 1.5rem; 
   margin: 12vw; 
   transition: color 0.5s ease, background-color 0.3s ease; /* Smooth transition for hover effects */
@@ -826,6 +824,7 @@ footer {
 #contact-box:hover{
   cursor: pointer;
   background-color: var(--accent-color-dark);
+  border-color: var(--light-color);
 }
 
 
